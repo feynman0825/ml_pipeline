@@ -1,3 +1,26 @@
 {
-    "python.pythonPath": "/Users/feynman/Dropbox/work/ANZ/ml_pipeline/venv/bin/python3.6"
+    "python.pythonPath": "venv/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "yapf",
+    "python.linting.lintOnSave": true,
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/packages/regression_model",
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/packages/regression_model",
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/packages/regression_model",
+    },
+    "python.autoComplete.extraPaths": [
+        "/Users/feynman/Dropbox/work/ANZ/ml_pipeline/packages/regression_model",
+    ],
+    "python.analysis.extraPaths": [
+        "/Users/feynman/Dropbox/work/ANZ/ml_pipeline/packages/regression_model"
+    ],
 }

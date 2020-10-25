@@ -7,13 +7,12 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
-
 # Package meta-data.
 NAME = 'regression_model'
-DESCRIPTION = 'Regression model for using in the Train In Data online course "Deployment of Machine Learning Models".'
-URL = 'https://github.com/trainindata/deploying-machine-learning-models'
-EMAIL = 'christopher.samiullah@protonmail.com'
-AUTHOR = 'ChristopherGS'
+DESCRIPTION = ''
+URL = ''
+EMAIL = 'sam.xu@anz.com'
+AUTHOR = 'Sam'
 REQUIRES_PYTHON = '>=3.6.0'
 
 
@@ -22,12 +21,6 @@ def list_reqs(fname='requirements.txt'):
     with open(fname) as fd:
         return fd.read().splitlines()
 
-
-# The rest you shouldn't have to touch too much :)
-# ------------------------------------------------
-# Except, perhaps the License and Trove Classifiers!
-# If you do change the License, remember to change the
-# Trove Classifier for that!
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -39,7 +32,6 @@ try:
 except FileNotFoundError:
     long_description = DESCRIPTION
 
-
 # Load the package's __version__.py module as a dictionary.
 ROOT_DIR = Path(__file__).resolve().parent
 PACKAGE_DIR = ROOT_DIR / 'regression_model'
@@ -47,7 +39,6 @@ about = {}
 with open(PACKAGE_DIR / 'VERSION') as f:
     _version = f.read().strip()
     about['__version__'] = _version
-
 
 # Where the magic happens:
 setup(
@@ -60,16 +51,13 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    packages=find_packages(exclude=('tests',)),
+    packages=find_packages(exclude=('tests', )),
     package_data={'regression_model': ['VERSION']},
     install_requires=list_reqs(),
     extras_require={},
     include_package_data=True,
     license='BSD 3',
     classifiers=[
-        # Trove classifiers
-        # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
