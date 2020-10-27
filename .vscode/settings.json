@@ -9,18 +9,15 @@
     },
     "terminal.integrated.cwd": "${workspaceFolder}",
     "terminal.integrated.env.osx": {
-        "PYTHONPATH": "${workspaceFolder}/packages/regression_model",
-    },
-    "terminal.integrated.env.linux": {
-        "PYTHONPATH": "${workspaceFolder}/packages/regression_model",
-    },
-    "terminal.integrated.env.windows": {
-        "PYTHONPATH": "${workspaceFolder}/packages/regression_model",
+        // "PYTHONPATH": "${workspaceFolder}/packages/regression_model",
+        "PYTHONPATH": "${workspaceFolder}/packages/ml_api",
     },
     "python.autoComplete.extraPaths": [
         "/Users/feynman/Dropbox/work/ANZ/ml_pipeline/packages/regression_model",
+        "/Users/feynman/Dropbox/work/ANZ/ml_pipeline/packages/ml_api",
     ],
     "python.analysis.extraPaths": [
-        "/Users/feynman/Dropbox/work/ANZ/ml_pipeline/packages/regression_model"
+        "/Users/feynman/Dropbox/work/ANZ/ml_pipeline/packages/regression_model",
+        "/Users/feynman/Dropbox/work/ANZ/ml_pipeline/packages/ml_api",
     ],
 }

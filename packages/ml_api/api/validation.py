@@ -101,8 +101,7 @@ class HouseDataRequestSchema(Schema):
 
 
 def _filter_error_rows(errors: dict,
-                       validated_input: t.List[dict]
-                       ) -> t.List[dict]:
+                       validated_input: t.List[dict]) -> t.List[dict]:
     """Remove input data rows with errors."""
 
     indexes = errors.keys()
@@ -141,15 +140,9 @@ def validate_inputs(input_data):
             del dict[value]
 
     if errors:
-        validated_input = _filter_error_rows(
-            errors=errors,
-            validated_input=input_data)
+        validated_input = _filter_error_rows(errors=errors,
+                                             validated_input=input_data)
     else:
         validated_input = input_data
 
     return validated_input, errors
-
-
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in config.ALLOWED_EXTENSIONS

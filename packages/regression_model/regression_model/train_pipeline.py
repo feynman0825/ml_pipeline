@@ -19,7 +19,7 @@ def run_training() -> None:
     data = load_dataset(file_name=config.TRAINING_DATA_FILE)
 
     # divide train and test
-    X_train, X_test, y_train, y_test = train_test_split(
+    X_train, _, y_train, _ = train_test_split(
         data[config.FEATURES], data[config.TARGET], test_size=0.1, random_state=0
     )  # we are setting the seed here
 

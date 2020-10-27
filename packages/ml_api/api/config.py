@@ -6,16 +6,13 @@ import sys
 
 PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-FORMATTER = logging.Formatter(
-    "%(asctime)s — %(name)s — %(levelname)s —"
-    "%(funcName)s:%(lineno)d — %(message)s")
+FORMATTER = logging.Formatter("%(asctime)s — %(name)s — %(levelname)s —"
+                              "%(funcName)s:%(lineno)d — %(message)s")
 LOG_DIR = PACKAGE_ROOT / 'logs'
 LOG_DIR.mkdir(exist_ok=True)
 LOG_FILE = LOG_DIR / 'ml_api.log'
-UPLOAD_FOLDER = PACKAGE_ROOT / 'uploads'
-UPLOAD_FOLDER.mkdir(exist_ok=True)
-
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+# UPLOAD_FOLDER = PACKAGE_ROOT / 'uploads'
+# UPLOAD_FOLDER.mkdir(exist_ok=True)
 
 
 def get_console_handler():
@@ -25,8 +22,7 @@ def get_console_handler():
 
 
 def get_file_handler():
-    file_handler = TimedRotatingFileHandler(
-        LOG_FILE, when='midnight')
+    file_handler = TimedRotatingFileHandler(LOG_FILE, when='midnight')
     file_handler.setFormatter(FORMATTER)
     file_handler.setLevel(logging.WARNING)
     return file_handler
@@ -52,7 +48,7 @@ class Config:
     CSRF_ENABLED = True
     SECRET_KEY = 'this-really-needs-to-be-changed'
     SERVER_PORT = 5000
-    UPLOAD_FOLDER = UPLOAD_FOLDER
+    # UPLOAD_FOLDER = UPLOAD_FOLDER
 
 
 class ProductionConfig(Config):
