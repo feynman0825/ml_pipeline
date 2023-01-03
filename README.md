@@ -1,3 +1,15 @@
 # ml_pipeline
 
-add some text
+## Unittest
+
+```{bash}
+cd regression_model
+pytest
+```
+
+## Tox
+
+```{bash}
+cd regression_model
+tox
+```
